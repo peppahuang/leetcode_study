@@ -26,3 +26,20 @@
 空链表[]指的是head == nullptr而不是head -> next == nullptr
 我写的代码用的是循环一次一个vector存储所有数字，再循环一次进行反赋值。但是最快捷的方法是使用两个pointer，一个用来移动，一个记录上一个结点，使得不丢失上一个结点的位置。
 反转完毕后，要将最后一个结点的next赋值Nullptr
+
+class Solution {
+public:
+    ListNode* reverseList(ListNode* head) {
+        ListNode* temp; // 保存cur的下一个节点
+        ListNode* cur = head;
+        ListNode* pre = NULL;
+        while(cur) {
+            temp = cur->next;  // 保存一下 cur的下一个节点，因为接下来要改变cur->next
+            cur->next = pre; // 翻转操作
+            // 更新pre 和 cur指针
+            pre = cur;
+            cur = temp;
+        }
+        return pre;
+    }
+};
