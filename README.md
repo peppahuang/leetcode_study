@@ -52,4 +52,9 @@ ListNode *dummyHead = new ListNode(0);
 
 返回的时候return dummyHead -> next而不是dummyHead。
 
+sample：
+ListNode* dummyHead = new ListNode(0); // 设置一个虚拟头结点
+dummyHead->next = head; // 将虚拟头结点指向head，这样方面后面做删除操作
+ListNode* cur = dummyHead;
+
 要注意，需要处理的一定是cur -> next而不是cur，也要注意while停止的条件，是cur -> next != nullptr；
