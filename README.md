@@ -62,3 +62,36 @@ ListNode* cur = dummyHead;
 2、#19. 删除链表的倒数第 N 个结点
 可以使用一个n长的滑动窗口来完成倒数的任务。
 
+3、寻找环（注意其中的数学关系，很巧妙。https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0142.%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8II.md）
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode *detectCycle(ListNode *head) {
+        ListNode *fast, *slow;
+        fast = head;
+        slow = head;
+        while (fast != NULL && fast -> next != NULL) {
+            fast = fast -> next -> next;
+            slow = slow -> next;
+            if (fast == slow) {
+                ListNode *p1, *p2;
+                p1 = head;
+                p2 = fast;
+                while (p2 != p1) {
+                    p1 = p1 -> next;
+                    p2 = p2 -> next;
+                }
+                return p2;
+            }
+        }
+        return NULL;
+        
+    }
+};
