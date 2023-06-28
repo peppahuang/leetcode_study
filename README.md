@@ -43,3 +43,13 @@ public:
         return pre;
     }
 };
+
+2023.06.28
+1、交换链表 #24
+使用虚拟头结点 dummyHead
+要注意，定义的时候需要初始化
+ListNode *dummyHead = new ListNode(0);
+
+返回的时候return dummyHead -> next而不是dummyHead。
+
+要注意，需要处理的一定是cur -> next而不是cur，也要注意while停止的条件，是cur -> next != nullptr；
