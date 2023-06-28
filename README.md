@@ -58,3 +58,7 @@ dummyHead->next = head; // 将虚拟头结点指向head，这样方面后面做�
 ListNode* cur = dummyHead;
 
 要注意，需要处理的一定是cur -> next而不是cur，也要注意while停止的条件，是cur -> next != nullptr；
+
+2、#19. 删除链表的倒数第 N 个结点
+可以使用一个n长的滑动窗口来完成倒数的任务。
+
