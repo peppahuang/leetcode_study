@@ -113,3 +113,35 @@ memset是计算机中C/C++语言初始化函数。作用是将某一块内存中
 void *memset(void *s, int ch, size_t n);
 
 memset(hashOtherStr, 0, 26 * sizeof(int)); //设置26格子都为0的int数组
+
+#349. 两个数组的交集
+
+#202.快乐数（下面为代码随想录解答，主要学习unordered_set使用，首次接触）
+class Solution {
+public:
+    // 取数值各个位上的单数之和
+    int getSum(int n) {
+        int sum = 0;
+        while (n) {
+            sum += (n % 10) * (n % 10);
+            n /= 10;
+        }
+        return sum;
+    }
+    bool isHappy(int n) {
+        unordered_set<int> set;
+        while(1) {
+            int sum = getSum(n);
+            if (sum == 1) {
+                return true;
+            }
+            // 如果这个sum曾经出现过，说明已经陷入了无限循环了，立刻return false
+            if (set.find(sum) != set.end()) {
+                return false;
+            } else {
+                set.insert(sum);
+            }
+            n = sum;
+        }
+    }
+};
