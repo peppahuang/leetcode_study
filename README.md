@@ -213,3 +213,13 @@ reverse的区间左闭右开
 * 学习KMP算法
 * https://www.bilibili.com/video/BV1jb411V78H/?spm_id_from=333.337.search-card.all.click&vd_source=57361abd4023827115c685feaf4ee90e
 * 天勤考研讲述KMP算法
+* 
+* 学习const static
+* https://blog.csdn.net/gghhb12/article/details/123523263
+* 
+* 学习参数传递方式&和*以及传值
+* https://blog.csdn.net/zeng_jun_yv/article/details/98868159
+
+* const_cast ： 去const化
+
+* const作用：https://blog.csdn.net/qq_39477420/article/details/121888402（未进行理解）
