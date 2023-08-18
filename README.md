@@ -208,3 +208,8 @@ reverse的区间左闭右开
 
 ## 2023.08.15
 * KMP算法以及字符串后面两题待解决。
+* 
+## 2023.08.18
+* 学习KMP算法
+* https://www.bilibili.com/video/BV1jb411V78H/?spm_id_from=333.337.search-card.all.click&vd_source=57361abd4023827115c685feaf4ee90e
+* 天勤考研讲述KMP算法
